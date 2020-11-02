@@ -32,15 +32,13 @@ const crud = {
   },
 
   addPost(data) {
-    console.log('aaaaaaaa');
     return getDb()
       .collection('posts')
       .add(data)
-      .then((docRef) => {
-        console.log('post guardado');
-        return docRef;
-      })
-      .catch((error) => {});
+      .then(docRef => docRef)
+      .catch((error) => {
+        console.log(error);
+      });
   },
   async updateImage(imagesUpload, nameUser) {
     const storageRef = firebase.storage().ref();

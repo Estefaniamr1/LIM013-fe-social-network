@@ -10,6 +10,4 @@ const init = () => {
   window.addEventListener('hashchange', () => changeView(window.location.hash));
 };
 
-console.log('Estoy probando mi nueva rama', init);
-
 window.addEventListener('load', init); // llama a init una vez que la pagina este cargada

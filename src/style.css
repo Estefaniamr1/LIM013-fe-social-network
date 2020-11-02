@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -87,18 +93,12 @@ button {
   box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+
 .container {
   min-height: 100vh;
   position: relative;
 }
-header {
-  display: none;
-}
+
 main {
   overflow: auto;
   min-height: 750px;
@@ -159,29 +159,35 @@ a {
   padding: 15px 10px;
   border-bottom: 1px solid #bebebe;
 }
+
 #buttonLogout {
   border: none;
   background: none;
   cursor: pointer;
   color: black;
 }
+
 .logotipoTimeline img {
   width: 100%;
   align-self: center;
 }
+
 .logotipoTimeline {
   width: 30%;
   display: flex;
 }
+
 .prepost {
   margin: 25px 0px;
 }
+
 #postUser {
   border: none;
   background: #f0f0f0;
   padding: 6px;
   border-radius: 10px;
 }
+
 #sendPost {
   border: none;
   background: #efea5a;
@@ -189,12 +195,14 @@ a {
   padding: 6px;
   cursor: pointer;
 }
+
 .userData img {
   width: 50px;
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
 }
+
 #tabla > div {
   margin: 20px auto;
   width: 60%;
@@ -202,19 +210,15 @@ a {
   border-radius: 10px;
   padding: 0px 0px 15px 0px;
 }
+
 .userData {
-  /*! text-align: center; */
   padding: 10px;
   background: #dedede;
   border-radius: 10px 10px 0px 0px;
   display: flex;
-  /*! text-align: center; */
-  /*! justify-content: center; */
-  /*! flex-direction: column; */
-  /*! flex-wrap: wrap-reverse; */
-  /*! justify-content: space-around; */
   border-bottom: 1px solid #c9c9c9;
 }
+
 .postedMessage {
   width: 80%;
   margin: 15px 10px;
@@ -222,15 +226,18 @@ a {
   background: none;
   border: none;
 }
+
 .userData img {
   margin: 0px 15px 0px 0px;
 }
+
 .buttonsData button {
   border: none;
   background: #efea5a;
   border-radius: 10px;
   padding: 6px;
 }
+
 .userData label {
   align-self: center;
   font-size: 20px;
@@ -302,9 +309,11 @@ a {
   .styleH2 {
     padding: 5px;
   }
+
   .cabeceraMobile {
     display: none;
   }
+
   .form {
     display: flex;
     flex-wrap: wrap;
@@ -313,9 +322,11 @@ a {
     max-width: 400px;
     margin: 0 auto;
   }
+
   footer {
     display: none;
   }
+
   .cabeceraDesktop {
     display: block;
     position: absolute;
@@ -323,43 +334,52 @@ a {
     bottom: 0;
     width: 100%;
   }
+
   .cabeceraDesktop img {
     width: 100%;
   }
+
   #cabecera {
     display: flex;
     justify-content: space-between;
     padding: 15px 10px;
     border-bottom: 1px solid #bebebe;
   }
+
   #imageProfile {
     width: 50px;
     height: 50px;
     align-self: center;
   }
+
   #buttonLogout {
     border: none;
     background: none;
     cursor: pointer;
     color: black;
   }
+
   .logotipoTimeline img {
     width: 100%;
     align-self: center;
   }
+
   .logotipoTimeline {
     width: 30%;
     display: flex;
   }
+
   .prepost {
     margin: 25px 0px;
   }
+
   #postUser {
     border: none;
     background: #f0f0f0;
     padding: 6px;
     border-radius: 10px;
   }
+
   #sendPost {
     border: none;
     background: #efea5a;
@@ -367,6 +387,7 @@ a {
     padding: 6px;
     cursor: pointer;
   }
+
   .galletita {
     box-shadow: 7px 0px 14px 0px rgba(0, 0, 0, 0.2);
     margin-top: 90px;
