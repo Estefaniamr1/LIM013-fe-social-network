@@ -2,13 +2,13 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Definicion de usuario](#3-definicion-de-usuario)
-* [4. Definicion del producto](#4-definicion-del-producto)
-* [5. Resumen de feedback](#5-resumen-de-feedback)
-* [6. Construido con](#6-construido-con)
-* [7. Autores](#7-autores)
+- [1. Preámbulo](#1-preámbulo)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+- [3. Definicion de usuario](#3-definicion-de-usuario)
+- [4. Definicion del producto](#4-definicion-del-producto)
+- [5. Resumen de feedback](#5-resumen-de-feedback)
+- [6. Construido con](#6-construido-con)
+- [7. Autores](#7-autores)
 
 ## 1. Preámbulo
 
@@ -18,7 +18,7 @@ Estos sitios facilitan la comunicacion entre personas, el intercambio de informa
 
 ## 2. Resumen del proyecto
 
-El presente proyecto  **Mochileros** es una red social destinada a un publico apasionado por viajar y aventurarse, interesados por compartir sus experiencias y tener nuevas conexiones con otras personas. Esta comunidad de viajeros se nutre de las experiencias de cada uno basadas en viajes con bajos presupuestos, rutas, hospedajes, promociones, etc de cierto lugar dandole protagonismo a los usuarios y a las comunidades que estos conforman. 
+El presente proyecto **Mochileros** es una red social destinada a un publico apasionado por viajar y aventurarse, interesados por compartir sus experiencias y tener nuevas conexiones con otras personas. Esta comunidad de viajeros se nutre de las experiencias de cada uno basadas en viajes con bajos presupuestos, rutas, hospedajes, promociones, etc de cierto lugar dandole protagonismo a los usuarios y a las comunidades que estos conforman.
 Esta red social permite que cualquier usuario mochilero pueda crear su cuenta de acceso o iniciar sesion con su cuenta de Google y pueda con ella crear, editar y eliminar sus publicaciones de sus experiencias viajando, ademas podra actualizar su perfil.
 
 ## 3. Definicion de usuario
@@ -30,9 +30,10 @@ El Mochilero se caracteriza por ser de corazon aventurero, es apasionado por viv
 La app para Mochileros da una nueva oportunidad dentro de la situación excepcional de la pandemia, donde se ve perjudicado el presupuesto y la libertad de viajar. Esta aplicación conecta a viajeros de diversas comunidades, a fin de servir de puente comunicacional, acerca de los lugares activos, que cumplan con los requerimientos esenciales de seguridad e higiene.
 
 ## 4.1 Prototipos
-![Prototipos Desktop](prototipos/vista1.jpeg)}
 
-![Prototipos Móvil](prototipos/vista1cel.jpeg)}
+![Prototipos Desktop](prototipos/vista1.jpeg)
+
+![Prototipos Móvil](prototipos/vista1cel.jpeg)
 
 ## 5. Resumen del feedback
 

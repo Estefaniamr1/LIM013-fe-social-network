@@ -1,19 +1,19 @@
-import { components } from "../view/index.js";
+import { components } from '../view/index.js';
 
 const changeView = (route) => {
-  const container = document.getElementById("container");
-  container.innerHTML = "";
+  const container = document.getElementById('container');
+  container.innerHTML = '';
   switch (route) {
-    case "": {
+    case '': {
       return container.appendChild(components.sesion());
     }
-    case "#/": {
+    case '#/': {
       return container.appendChild(components.sesion());
     }
-    case "#/registro": {
+    case '#/registro': {
       return container.appendChild(components.registro());
     }
-    case "#/timeline": {
+    case '#/timeline': {
       return container.appendChild(components.timeline());
     }
     default:

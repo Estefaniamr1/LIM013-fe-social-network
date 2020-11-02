@@ -1,5 +1,5 @@
 import {
-  logOut, loginGoogle, user, loginUser,
+  logOut, loginGoogle, loginUser,
 } from './auth.js';
 
 export const logOutEvent = () => {
@@ -10,7 +10,11 @@ export const logOutEvent = () => {
 };
 export const loginGoogleEvent = (errorContainer) => {
   loginGoogle()
+<<<<<<< HEAD
     .then((result) => {
+=======
+    .then(() => {
+>>>>>>> master
       window.location.hash = '#/timeline';
     })
     .catch((error) => {
