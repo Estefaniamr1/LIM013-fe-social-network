@@ -22,7 +22,7 @@ const crud = {
     return getDb()
       .collection('posts')
       .doc(id)
-      .set(data, { merge: true })
+      .update(data)
       .then(() => {
         console.log('Document successfuly edited!');
       })

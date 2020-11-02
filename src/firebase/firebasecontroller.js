@@ -8,17 +8,14 @@ export const logOutEvent = () => {
     console.log('¡Se cerró, lo logramos!');
   });
 };
-export const loginGoogleEvent = () => {
+export const loginGoogleEvent = (errorContainer) => {
   loginGoogle()
     .then((result) => {
-      console.log('entroo');
-      const usuario = result;
-      console.log(usuario);
       window.location.hash = '#/timeline';
-      console.log(user());
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      const templateError = `<div class="modal-error"><p>Hubo un problema: ${error.message}</p></div>`;
+      errorContainer.innerHTML = templateError;
     });
 };
 export const loginUserEvent = (user, password, errorContainer) => {
