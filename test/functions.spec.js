@@ -2,10 +2,10 @@ import MockFirebase from 'mock-cloud-firestore';
 
 const fixtureData = {
   __collection__: {
-    publications: {
+    posts: {
       __doc__: {
         abc1d: {
-          note: 'hola viajero'
+          comentario: 'hola viajero'
         },
       },
     },
@@ -25,8 +25,8 @@ describe('Agregar post', () => {
     // en firestore  no existe un post con el comentario `comentario`
     firebase.firestore().collection('posts').get()
       .then((result) => {
-        console.log(result.data);
-        expect(Object.values(result.data).filter((p) => p.comentario === data.comentario).length).toBe(0);
+        console.log(result._data);
+        expect(result._data.filter((p) => p._data.comentario === data.comentario).length).toBe(0);
         return crud.addPost(data)      
       })
       .then((docRef) => {
@@ -34,40 +34,39 @@ describe('Agregar post', () => {
         return firebase.firestore().collection('posts').get()
       })
       .then((result2) => {
-        expect(Object.values(result2.data).filter((p) => p.comentario === data.comentario).length).toBe(1);
+        expect(result2._data.filter((p) => p._data.comentario === data.comentario).length).toBe(1);
         done();
       });
   });
 });
- 
-describe('Edit a post', () => {
+
+ describe('Edit a post', () => {
   it('Should edit a post', (done) => {
-    return crud.editar('abc1d', 'hola viajero, gracias por venir')
-      .then(() => firebase.firestore().collection('posts').get()(
-        (data) => {
-          const result = data.find((element) => element.note === 'hola viajero, gracias por venir');
-          expect(result.note).toBe('hola viajero, gracias por venir');
+    const dato = {
+      comentario: 'hola viajero, gracias por venir'
+    }
+      return crud.editar('abc1d', dato)
+        .then(() => firebase.firestore().collection('posts').get())
+        .then((querySnapshot) => {
+          const result = querySnapshot._data.find((posts) => posts._data.comentario === 'hola viajero, gracias por venir');
+          console.log(result);
+          expect(result._data.comentario).toBe('hola viajero, gracias por venir');
           done();
-        },
-      ));
+      }); 
   });
-});
-
-describe('Delete a post', () => {
+}); 
+ describe('Delete a post', () => {
   it('Should delete a post', (done) => {
-    return deletePost('abc1d')
-      .then(() => firebase.firestore().collection('posts').get()(
-        (data) => {
-          const result = data.find((element) => element.id === 'abc1d');
+    const dato = {
+      comentario: 'hola viajero, gracias por venir'
+    }
+      return crud.eliminar('abc1d', dato)
+        .then(() => firebase.firestore().collection('posts').get())
+        .then((querySnapshot) => {
+          const result = querySnapshot._data.find((posts) => posts._data.id === 'hola viajero, gracias por venir');
           expect(result).toBe(undefined);
-          done();
-        },
-      ));
+          done()
+        });
   });
 });
-
-/* describe('Edit a post', () => {
-  it('Should edit a post', () => {
-    const mockEdit = jest.fn();
-  });
-}); */
+ 
