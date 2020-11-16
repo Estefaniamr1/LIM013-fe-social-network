@@ -1,3 +1,5 @@
+import { tryAuth } from './auth.js';
+
 export const firebaseInit = () => {
   const firebaseConfig = {
     apiKey: 'AIzaSyC5FldKTETVm2C3VywGvyXp9QtFWlVUl8g',
@@ -10,4 +12,5 @@ export const firebaseInit = () => {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  tryAuth();
 };

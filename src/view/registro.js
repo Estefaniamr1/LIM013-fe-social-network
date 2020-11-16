@@ -30,15 +30,17 @@ export default () => {
     const passwordSignUp = divElem.querySelector('#contraseñaSignUp').value;
 
     createUserAccount(usuarioSignUp, passwordSignUp)
-      .then((userCredential) => {
-        userCredential.user
-          .updateProfile({
-            displayName: userNameSignUp,
-            photoURL: '../images/user.png',
-          })
-          .then(() => {
-            loginUserEvent(usuarioSignUp, passwordSignUp);
-          });
+      .then(userCredential => userCredential.user
+        .updateProfile({
+          displayName: userNameSignUp,
+          photoURL: 'images/user.png',
+        }))
+      .then(() => {
+        loginUserEvent(usuarioSignUp, passwordSignUp);
+        return 6;
+      })
+      .then((response) => {
+        console.log(response);
       })
       .catch((error) => {
         const errorContainer = divElem.querySelector('#errorMessage');

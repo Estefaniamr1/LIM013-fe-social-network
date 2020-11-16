@@ -1,7 +1,7 @@
 const getDb = () => firebase.firestore();
 
 export const getDataSnapshot = (collection, querySnapshot) => {
-  getDb().collection(collection).onSnapshot(querySnapshot);
+  getDb().collection(collection).orderBy('date', 'desc').onSnapshot(querySnapshot);
 };
 
 const crud = {
